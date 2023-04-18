@@ -1,0 +1,38 @@
+# Lando configuration file for project "guitarsipra"
+#
+# This file sets up a Wordpress installation with MariaDB as the database and Apache as the web server.
+
+name: playground-wp
+
+# Recipe for the project. In this case, it's Wordpress.
+recipe: wordpress
+
+# Global configuration options for the project
+config:
+  # PHP version to use for the project
+  php: "7.4"
+  # Web server to use for the project
+  via: apache
+  # Web root directory for the project
+  webroot: .
+  # Database to use for the project
+  database: mariadb
+
+# Service-specific configuration options
+services:
+  # Configuration options for the MariaDB database
+  database:
+    # Type of service to use for the database
+    type: mariadb
+    # Whether to forward the database port to the host
+    portforward: true
+    # Credentials to use for the database
+    creds:
+      database: playground_wp_wp
+      user: playground_wp_wp
+      password: 123456
+
+  # Configuration options for PhpMyAdmin
+  phpmyadmin:
+    # Type of service to use for PhpMyAdmin
+    type: phpmyadmin
