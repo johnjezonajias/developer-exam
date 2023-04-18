@@ -4,4 +4,4 @@ A sample site to be used in testing the Very Simple CRM plugin. Included is .lan
 
 ## Very Simple CRM WordPress Plugin
 
-Is a simple CRM system that collects data and save on the database as custom post type.
+"Test Project Creating A Simple Lead Gen Form Plugin" as part of my requirements.
